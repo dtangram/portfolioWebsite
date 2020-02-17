@@ -1,0 +1,255 @@
+.graphic, #main {
+  margin: 0 auto; }
+
+* {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #CCC;
+  color: #FFF;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  position: relative; }
+
+/* TYPOGRAPHY ================================== */
+h1, h2 {
+  font-weight: bold;
+  line-height: 70px;
+  text-transform: capitalize; }
+
+h1 {
+  color: #FFF;
+  font-weight: bold; }
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  text-align: center; }
+
+.currentLink a {
+  text-decoration: underline; }
+
+a {
+  color: #FFF;
+  font-weight: bold; }
+  a:hover {
+    color: #FFF;
+    text-decoration: underline; }
+
+p {
+  color: #FFF;
+  font-size: 2rem; }
+
+.graphic {
+  background: #ECAA1E;
+  height: 10px;
+  margin-bottom: 50px;
+  width: 70px; }
+
+.row {
+  flex-wrap: nowrap; }
+  @media (max-width: 991px) {
+    .row {
+      flex-wrap: wrap; } }
+
+figure {
+  margin: 0; }
+
+/* BASE STRUCTURE =============================== */
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 950px;
+  max-height: 950px;
+  padding: 0;
+  position: relative;
+  width: 100%; }
+  @media (max-width: 500px) {
+    #main {
+      padding-bottom: 80px; } }
+  @media (max-width: 1199px) {
+    #main {
+      width: 100%; } }
+
+/* HEADER ================================== */
+header {
+  align-items: center;
+  background: #3396CB;
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  margin-bottom: 40px;
+  padding: 0 9%;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 999;
+  /*LOGO*/
+  /*NAVIGATION*/ }
+  @media (max-width: 500px) {
+    header {
+      width: 100%; } }
+  @media (max-width: 800px) {
+    header {
+      background-position: center;
+      margin-bottom: 20px;
+      width: 100%; } }
+  header > section {
+    display: inline-block; }
+    @media (max-width: 500px) {
+      header > section {
+        width: 50% !important; } }
+    @media (max-width: 800px) {
+      header > section {
+        width: 40%; } }
+    header > section a {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      padding: .5rem 1rem; }
+      header > section a:hover {
+        text-decoration: none; }
+      header > section a figure {
+        float: left;
+        height: 100%;
+        margin-right: 5%;
+        width: 26%; }
+      header > section a figure img {
+        width: 100%; }
+        @media (max-width: 500px) {
+          header > section a figure img {
+            margin-right: 2%;
+            width: 45px; } }
+        @media (max-width: 800px) {
+          header > section a figure img {
+            width: 15px; } }
+      header > section a h1 {
+        color: #FFF;
+        font-size: 1.5em;
+        font-weight: normal; }
+        @media (max-width: 897px) {
+          header > section a h1 {
+            font-size: 1.3em; } }
+        @media (max-width: 991px) {
+          header > section a h1 {
+            padding-top: 3px; } }
+        header > section a h1 span {
+          font-weight: bold; }
+  header nav {
+    float: right;
+    margin-right: 0; }
+    @media (max-width: 1199px) {
+      header nav.navbar {
+        padding-top: 3px; } }
+    @media (max-width: 500px) {
+      header nav {
+        right: 26px !important; } }
+    @media (max-width: 800px) {
+      header nav {
+        position: absolute;
+        margin-right: 0;
+        top: 19px;
+        z-index: 99;
+        width: auto; } }
+    header nav img {
+      cursor: pointer;
+      display: none;
+      width: 30px; }
+    @media (max-width: 800px) {
+      header nav img:nth-child(1) {
+        display: block;
+        float: right; } }
+    @media (max-width: 800px) {
+      header nav img:nth-child(2) {
+        float: right; } }
+    @media (max-width: 800px) {
+      header nav div.container ul {
+        background: #3396CB;
+        margin-top: 38px; } }
+    @media (max-width: 800px) {
+      header nav div.container ul {
+        display: flex;
+        flex-direction: column; } }
+    header nav div.container ul li {
+      padding: 0;
+      text-align: center;
+      width: 100px; }
+      @media (max-width: 800px) {
+        header nav div.container ul li {
+          font-size: .9em;
+          margin-bottom: 20px;
+          text-align: left;
+          width: 65px; } }
+      header nav div.container ul li a {
+        font-size: .9em;
+        text-transform: uppercase;
+        text-decoration: none; }
+        header nav div.container ul li a:last-child {
+          margin-left: 7%; }
+  header .bckColor {
+    background: #3396CB;
+    height: 100px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1; }
+
+/* FOOTER =============================== */
+footer {
+  padding: 30px 2%;
+  background: #3396CB;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0; }
+  footer article {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center; }
+    @media (max-width: 500px) {
+      footer article {
+        display: flex;
+        flex-direction: column;
+        width: 100%; } }
+    footer article p {
+      font-size: 1em;
+      margin-right: 1%; }
+      @media (max-width: 500px) {
+        footer article p {
+          float: none;
+          margin-bottom: 15px;
+          text-align: center; } }
+    footer article section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      footer article section figure {
+        margin-right: 10%; }
+      footer article section figure:last-child {
+        margin-right: 0; }
+      footer article section figure img {
+        cursor: pointer; }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    width: 220px; }
+    footer ul li, footer ul p {
+      margin-right: 3%; }
+    footer ul li {
+      cursor: pointer;
+      font-size: .8em; }
+      footer ul li:hover {
+        color: #ECAA1E; }
