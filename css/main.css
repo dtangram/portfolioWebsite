@@ -424,7 +424,7 @@ header {
         width: auto; } }
     @media (max-width: 800px) {
       header nav article.container section#navbarResponsive ul {
-        background: #3396CB;
+        background: #2B2B2B;
         margin-top: 38px; } }
     @media (max-width: 800px) {
       header nav article.container section#navbarResponsive ul {
@@ -944,10 +944,9 @@ header {
     color: #FFF;
     font-size: 1em; }
 
-/* FOOTER =============================== */
 footer {
   padding: 30px 2%;
-  background: #3396CB;
+  background: #2B2B2B;
   bottom: 0 !important;
   left: 0;
   position: absolute;
