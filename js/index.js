@@ -11,10 +11,10 @@ $(document).ready(function() {
 				linkHome = $("#linkHome"),
 				linkprojects = $("#linkprojects"),
 				linkContact = $("#linkContact"),
-				thumbsNthchild = $("#projects section article .thumbs a:nth-child(1) li"),
-				thumbsNthchild2 = $("#projects section article .thumbs a:nth-child(2) li"),
-				thumbsNthchild3 = $("#projects section article .thumbs a:nth-child(3) li"),
-				thumbsNthchild4 = $("#projects section article .thumbs a:nth-child(4) li"),
+				thumbsNthchild = $("#projects section:nth-child(3) article .thumbs a:nth-child(1) li"),
+				thumbsNthchild2 = $("#projects section:nth-child(3) article .thumbs a:nth-child(2) li"),
+				thumbsNthchild3 = $("#projects section:nth-child(3) article .thumbs a:nth-child(3) li"),
+				thumbsNthchild4 = $("#projects section:nth-child(3) article .thumbs a:nth-child(4) li"),
 				thumbsNthchild5 = $("#projects section:nth-child(4) article .thumbs a:nth-child(1) li"),
 				thumbsNthchild6 = $("#projects section:nth-child(4) article .thumbs a:nth-child(2) li"),
 				thumbsNthchild7 = $("#projects section:nth-child(4) article .thumbs a:nth-child(3) li"),
@@ -166,12 +166,6 @@ $(document).ready(function() {
 		thumb3.stop().animate({"left": "0"}, 500, function() {
 			thumb3.stop().animate({"opacity": "1"}, 500);
 		});
-
-		if($(window).width() < 1200)
-		{
-			$(overlay3).css("display", "none");
-			thumb3.css("display", "none");
-		}
 	});
 
 
@@ -189,12 +183,6 @@ $(document).ready(function() {
 		thumb4.stop().animate({"left": "0"}, 500, function() {
 			thumb4.stop().animate({"opacity": "1"}, 500);
 		});
-
-		if($(window).width() < 1200)
-		{
-			$(overlay4).css("display", "none");
-			thumb4.css("display", "none");
-		}
 	});
 
 
@@ -212,12 +200,6 @@ $(document).ready(function() {
 		thumb5.stop().animate({"top": "0"}, 500, function() {
 			thumb5.stop().animate({"opacity": "1"}, 500);
 		});
-
-		if($(window).width() < 1200)
-		{
-			$(overlay5).css("display", "none");
-			thumb5.css("display", "none");
-		}
 	});
 
 
@@ -235,12 +217,6 @@ $(document).ready(function() {
 		thumb6.stop().animate({"top": "0"}, 500, function() {
 			thumb6.stop().animate({"opacity": "1"}, 500);
 		});
-
-		if($(window).width() < 1200)
-		{
-			$(overlay6).css("display", "none");
-			thumb6.css("display", "none");
-		}
 	});
 
 
@@ -258,12 +234,6 @@ $(document).ready(function() {
 		thumb7.stop().animate({"left": "0"}, 500, function() {
 			thumb7.stop().animate({"opacity": "1"}, 500);
 		});
-
-		if($(window).width() < 1200)
-		{
-			$(overlay7).css("display", "none");
-			thumb7.css("display", "none");
-		}
 	});
 
 
@@ -281,12 +251,6 @@ $(document).ready(function() {
 		thumb8.stop().animate({"left": "0"}, 500, function() {
 			thumb8.stop().animate({"opacity": "1"}, 500);
 		});
-
-		if($(window).width() < 1200)
-		{
-			$(overlay8).css({"display": "none", "left": "0"});
-			thumb8.stop().css({"display": "none"});
-		}
 	});
 
   // AUTOMATIC COPYRIGHT YEAR CHANGE
