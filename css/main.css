@@ -869,7 +869,7 @@ header {
       #projects .thumbs li .titles {
         position: absolute;
         z-index: 1;
-        background-color: rgba(51, 150, 203, 0.8);
+        background-color: rgba(51, 150, 203, 0.9);
         width: 100%;
         height: 100%;
         display: inline-block;
@@ -895,22 +895,26 @@ header {
           text-align: center; }
         #projects .thumbs li .titles > p {
           font-size: 1.5rem;
-          font-weight: bold;
           line-height: 30px;
           text-align: center; }
   #projects section:nth-child(3) article.row:nth-child(odd) a:nth-child(2n + 0) section.titles {
-    background-color: rgba(236, 170, 30, 0.8); }
+    background-color: rgba(236, 170, 30, 0.9); }
   #projects section:nth-child(3) article.row:nth-child(even) a:nth-child(2n + 1) section.titles {
-    background-color: rgba(236, 170, 30, 0.8); }
+    background-color: rgba(236, 170, 30, 0.9); }
   #projects section:nth-child(4) article.row:nth-child(odd) a:nth-child(2n + 1) section.titles {
-    background-color: rgba(236, 170, 30, 0.8); }
+    background-color: rgba(236, 170, 30, 0.9); }
   #projects section:nth-child(4) article.row:nth-child(even) a:nth-child(2n + 0) section.titles {
-    background-color: rgba(236, 170, 30, 0.8); }
-  #projects .thumbs a section.titles > h3, #projects .thumbs a section.titles > p {
+    background-color: rgba(236, 170, 30, 0.9); }
+  #projects section:nth-child(3) article .thumbs a:nth-child(even) section.titles > h3, #projects section:nth-child(3) article .thumbs a:nth-child(even) section.titles > p {
     color: #000; }
-  #projects .thumbs a section.titles > hr {
+  #projects section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > h3, #projects section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > p {
+    color: #000; }
+  #projects section:nth-child(3) article .thumbs a:nth-child(even) section.titles > hr, #projects section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > hr {
     background: #000;
     border-color: #000; }
+  #projects section:nth-child(4) article .thumbs a:nth-child(even) section.titles > hr {
+    background: #FFF;
+    border-color: #FFF; }
   #projects .uiTxt {
     float: left;
     color: #FFF;

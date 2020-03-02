@@ -1203,7 +1203,7 @@ header{
   		.titles{
   			position: absolute;
   			z-index: 1;
-  			background-color: rgba(51, 150, 203, .8);
+  			background-color: rgba(51, 150, 203, .9);
   			width: 100%;
   			height: 100%;
   			display: inline-block;
@@ -1234,7 +1234,7 @@ header{
 
       	> p{
       		font-size: 1.5rem;
-          font-weight: $fontWeightBold;
+          // font-weight: $fontWeightBold;
           line-height: 30px;
       		text-align: center;
       	}
@@ -1243,38 +1243,48 @@ header{
   }
 
   section:nth-child(3) article.row:nth-child(odd) a:nth-child(2n + 0) section.titles{
-  	background-color: rgba(236, 170, 30, .8);
+  	background-color: rgba(236, 170, 30, .9);
   }
 
   section:nth-child(3) article.row:nth-child(even) a:nth-child(2n + 1) section.titles{
-  	background-color: rgba(236, 170, 30, .8);
+  	background-color: rgba(236, 170, 30, .9);
   }
 
   section:nth-child(4) article.row:nth-child(odd) a:nth-child(2n + 1) section.titles{
-  	background-color: rgba(236, 170, 30, .8);
+  	background-color: rgba(236, 170, 30, .9);
   }
 
   section:nth-child(4) article.row:nth-child(even) a:nth-child(2n + 0) section.titles{
-  	background-color: rgba(236, 170, 30, .8);
+  	background-color: rgba(236, 170, 30, .9);
   }
 
-  .thumbs a section.titles > h3, .thumbs a section.titles > p{
+  section:nth-child(3) article .thumbs a:nth-child(even) section.titles > h3, section:nth-child(3) article .thumbs a:nth-child(even) section.titles > p{
     color: $colorBlack;
   }
 
-  .thumbs a section.titles > hr{
+  section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > h3, section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > p{
+    color: $colorBlack;
+  }
+
+  section:nth-child(3) article .thumbs a:nth-child(even) section.titles > hr, section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > hr{
     background: $colorBlack;
     border-color: $colorBlack;
   }
 
-  // .thumbs a:nth-child(even) section.titles > h3, .thumbs a:nth-child(even) section.titles > p{
+  section:nth-child(4) article .thumbs a:nth-child(even) section.titles > hr{
+    background: $colorWhite;
+    border-color: $colorWhite;
+  }
+
+  // .thumbs a section.titles > h3, .thumbs a section.titles > p{
   //   color: $colorBlack;
   // }
-
-  // .thumbs a:nth-child(even) section.titles > hr{
+  //
+  // .thumbs a section.titles > hr{
   //   background: $colorBlack;
   //   border-color: $colorBlack;
   // }
+
 
   .uiTxt{
   	float: left;
