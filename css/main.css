@@ -1,4 +1,4 @@
-.graphic, #main {
+.graphic, #main, #home .scrollDwn .down {
   margin: 0 auto; }
 
 * {
@@ -51,8 +51,16 @@ p {
 .graphic {
   background: #ECAA1E;
   height: 10px;
-  margin-bottom: 50px;
   width: 70px; }
+  @media (max-width: 897px) {
+    .graphic {
+      height: 8px;
+      width: 67px; } }
+  @media (max-width: 500px) {
+    .graphic {
+      height: 6px;
+      margin-top: 10px;
+      width: 60px; } }
 
 .row {
   flex-wrap: nowrap; }
@@ -374,15 +382,15 @@ header {
     display: inline-block; }
     @media (max-width: 500px) {
       header .logo {
-        width: 50% !important; } }
-    @media (max-width: 800px) {
-      header .logo {
-        width: 40%; } }
+        width: 77% !important; } }
     header .logo a {
       align-items: center;
       display: flex;
       flex-direction: row;
       padding: .5rem 1rem; }
+      @media (max-width: 500px) {
+        header .logo a {
+          flex-direction: column; } }
       header .logo a:hover {
         text-decoration: none; }
       header .logo a figure {
@@ -390,25 +398,38 @@ header {
         height: 100%;
         margin-right: 5%;
         width: 38%; }
+        @media (max-width: 500px) {
+          header .logo a figure {
+            margin-bottom: 6%; } }
+        @media (max-width: 897px) {
+          header .logo a figure {
+            width: 30%; } }
+        @media (max-width: 1199px) {
+          header .logo a figure {
+            width: 34%; } }
       header .logo a figure img {
         width: 100%; }
         @media (max-width: 500px) {
           header .logo a figure img {
             margin-right: 2%;
-            width: 45px; } }
-        @media (max-width: 800px) {
-          header .logo a figure img {
-            width: 15px; } }
+            width: 80px; } }
       header .logo a h1 {
         color: #FFF;
         font-size: 3rem;
         font-weight: bold; }
-        @media (max-width: 897px) {
+        @media (max-width: 800px) {
           header .logo a h1 {
-            font-size: 1.3em; } }
+            font-size: 2rem;
+            line-height: 0; } }
         @media (max-width: 991px) {
           header .logo a h1 {
             padding-top: 3px; } }
+        @media (max-width: 1199px) {
+          header .logo a h1 {
+            font-size: 2.5rem; } }
+        @media (max-width: 500px) {
+          header .logo a h1 {
+            font-size: 1.5rem; } }
   header nav {
     float: right;
     margin-right: 0; }
@@ -422,18 +443,23 @@ header {
       header nav {
         position: absolute;
         margin-right: 0;
-        top: 19px;
         z-index: 99;
         width: auto; } }
+    header nav.navbar-dark .navbar-toggler {
+      background-color: #ECAA1E;
+      border-color: #ecaa1e;
+      color: #ecaa1e;
+      font-size: 1.5rem; }
     @media (max-width: 800px) {
       header nav article.container section#navbarResponsive ul {
         background: #2B2B2B;
-        margin-top: 38px; } }
+        padding: 12px 12% 5%; } }
     @media (max-width: 800px) {
       header nav article.container section#navbarResponsive ul {
         display: flex;
         flex-direction: column; } }
     header nav article.container section#navbarResponsive ul li {
+      margin-bottom: 15px;
       padding: 0;
       text-align: center;
       width: 100px; }
@@ -449,6 +475,9 @@ header {
       text-align: center;
       text-transform: uppercase;
       text-decoration: none; }
+      @media (max-width: 1199px) {
+        header nav article.container section#navbarResponsive ul li a {
+          font-size: 1.6rem; } }
     header nav article.container section#navbarResponsive ul .currentLink a:after {
       content: '';
       display: block;
@@ -486,40 +515,62 @@ header {
 /*END HEADER*/
 /*HOME*/
 #home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 1150px;
+  padding-top: 220px;
   position: relative;
   width: 100%;
   /*SCROLL DOWN*/
   /*END SCROLL DOWN*/ }
   #home .personal {
-    display: flex;
     flex: none;
-    flex-direction: column;
-    justify-content: center;
-    margin: 50px auto 0;
+    height: auto;
+    margin: 0 auto 50px;
     width: 60%;
     z-index: 1; }
+    @media (max-width: 1199px) {
+      #home .personal {
+        width: 100%; } }
     #home .personal .profile {
       margin: 0 auto;
       width: 200px; }
+      @media (max-width: 1199px) {
+        #home .personal .profile {
+          width: 150px; } }
       #home .personal .profile img {
         width: 100%; }
     #home .personal h2 {
       font-size: 4rem;
       font-weight: bold;
       text-align: center; }
-      #home .personal h2 .graphic {
-        background: #ECAA1E;
-        margin: 0 auto 20px;
-        height: 10px;
-        width: 70px; }
+      @media (max-width: 897px) {
+        #home .personal h2 {
+          font-size: 3rem;
+          line-height: 50px; } }
+      @media (max-width: 1199px) {
+        #home .personal h2 {
+          font-size: 3.5rem;
+          line-height: 60px;
+          margin-bottom: 40px; } }
+      @media (max-width: 500px) {
+        #home .personal h2 {
+          font-size: 2rem;
+          line-height: 30px; } }
     #home .personal p {
       font-size: 2.5rem;
       line-height: 50px;
       padding: 0 3%; }
+      @media (max-width: 897px) {
+        #home .personal p {
+          font-size: 1.8rem;
+          line-height: 30px; } }
+      @media (max-width: 1199px) {
+        #home .personal p {
+          font-size: 2.1rem;
+          line-height: 40px; } }
+      @media (max-width: 500px) {
+        #home .personal p {
+          font-size: 1.3rem;
+          line-height: 20px; } }
       #home .personal p span {
         color: #ECAA1E; }
 
@@ -572,7 +623,9 @@ header {
     position: relative;
     text-align: center; }
     #home .scrollDwn .down {
+      left: 0;
       position: absolute !important;
+      right: 0;
       z-index: 4;
       -webkit-animation: downArrow 4000ms ease-in-out infinite;
       -moz-animation: downArrow 4000ms ease-in-out infinite;
@@ -601,31 +654,25 @@ header {
     font-size: 4rem;
     font-weight: bold;
     margin-top: 72px;
-    margin-bottom: 0;
     text-align: center; }
-    #projects h2 .graphic {
-      background: #ECAA1E;
-      margin: 0 auto 20px;
-      height: 10px;
-      width: 70px; }
   #projects section.container, #projects article.row {
     margin: 0;
     max-width: 100%;
     padding: 0; }
-  #projects section:nth-child(3) > article {
+  #projects section:nth-child(2) > article {
     display: block; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(1) li {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(1) li {
       position: relative;
       /*background: url(../img/thumb1.jpg) no-repeat 50% 50% / cover;*/
       overflow: hidden; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(1) li #rkTitle {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(1) li #rkTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(1) li #rkImg {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(1) li #rkImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -635,25 +682,25 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(1) li:hover #rkImg {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(1) li:hover #rkImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(1) li:hover #rkTitle {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(1) li:hover #rkTitle {
       opacity: 1; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(2) li {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(2) li {
       position: relative;
       overflow: hidden; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(2) li #rkBlogTitle {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(2) li #rkBlogTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(2) li #rkBlogImg {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(2) li #rkBlogImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -663,25 +710,25 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(2) li:hover #rkBlogImg {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(2) li:hover #rkBlogImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(2) li:hover #rkBlogTitle {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(2) li:hover #rkBlogTitle {
       opacity: 1; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(3) li {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(3) li {
       position: relative;
       overflow: hidden; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(3) li #ppTitle {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(3) li #ppTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(3) li #ppImg {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(3) li #ppImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -691,25 +738,25 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(3) li:hover #ppImg {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(3) li:hover #ppImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(3) li:hover #ppTitle {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(3) li:hover #ppTitle {
       opacity: 1; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(4) li {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(4) li {
       position: relative;
       overflow: hidden; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(4) li #mcTitle {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(4) li #mcTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(3) > article .thumbs a:nth-child(4) li #mcImg {
+      #projects section:nth-child(2) > article .thumbs a:nth-child(4) li #mcImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -719,27 +766,27 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(4) li:hover #mcImg {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(4) li:hover #mcImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(3) > article .thumbs a:nth-child(4) li:hover #mcTitle {
+    #projects section:nth-child(2) > article .thumbs a:nth-child(4) li:hover #mcTitle {
       opacity: 1; }
-  #projects section:nth-child(4) article {
+  #projects section:nth-child(3) article {
     display: block; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(1) li {
+    #projects section:nth-child(3) article .thumbs a:nth-child(1) li {
       position: relative;
       overflow: hidden; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(1) li #trackTitle {
+      #projects section:nth-child(3) article .thumbs a:nth-child(1) li #trackTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(1) li #trackImg {
+      #projects section:nth-child(3) article .thumbs a:nth-child(1) li #trackImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -749,25 +796,25 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(1) li:hover #trackImg {
+    #projects section:nth-child(3) article .thumbs a:nth-child(1) li:hover #trackImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(4) article .thumbs a:nth-child(1) li:hover #trackTitle {
+    #projects section:nth-child(3) article .thumbs a:nth-child(1) li:hover #trackTitle {
       opacity: 1; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(2) li {
+    #projects section:nth-child(3) article .thumbs a:nth-child(2) li {
       position: relative;
       overflow: hidden; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(2) li #feTitle {
+      #projects section:nth-child(3) article .thumbs a:nth-child(2) li #feTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(2) li #feImg {
+      #projects section:nth-child(3) article .thumbs a:nth-child(2) li #feImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -777,25 +824,25 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(2) li:hover #feImg {
+    #projects section:nth-child(3) article .thumbs a:nth-child(2) li:hover #feImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(4) article .thumbs a:nth-child(2) li:hover #feTitle {
+    #projects section:nth-child(3) article .thumbs a:nth-child(2) li:hover #feTitle {
       opacity: 1; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(3) li {
+    #projects section:nth-child(3) article .thumbs a:nth-child(3) li {
       position: relative;
       overflow: hidden; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(3) li #opTitle {
+      #projects section:nth-child(3) article .thumbs a:nth-child(3) li #opTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(3) li #opImg {
+      #projects section:nth-child(3) article .thumbs a:nth-child(3) li #opImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -805,25 +852,25 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(3) li:hover #opImg {
+    #projects section:nth-child(3) article .thumbs a:nth-child(3) li:hover #opImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(4) article .thumbs a:nth-child(3) li:hover #opTitle {
+    #projects section:nth-child(3) article .thumbs a:nth-child(3) li:hover #opTitle {
       opacity: 1; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(4) li {
+    #projects section:nth-child(3) article .thumbs a:nth-child(4) li {
       position: relative;
       overflow: hidden; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(4) li #ccTitle {
+      #projects section:nth-child(3) article .thumbs a:nth-child(4) li #ccTitle {
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in-out 300ms;
         -moz-transition: opacity 300ms ease-in-out 300ms;
         -o-transition: opacity 300ms ease-in-out 300ms;
         -ms-transition: opacity 300ms ease-in-out 300ms;
         transition: opacity 300ms ease-in-out 300ms; }
-      #projects section:nth-child(4) article .thumbs a:nth-child(4) li #ccImg {
+      #projects section:nth-child(3) article .thumbs a:nth-child(4) li #ccImg {
         position: absolute;
         z-index: 0;
         width: 638px;
@@ -833,13 +880,13 @@ header {
         -o-transition: all 300ms ease-in-out 300ms;
         -ms-transition: all 300ms ease-in-out 300ms;
         transition: all 300ms ease-in-out 300ms; }
-    #projects section:nth-child(4) article .thumbs a:nth-child(4) li:hover #ccImg {
+    #projects section:nth-child(3) article .thumbs a:nth-child(4) li:hover #ccImg {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -o-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    #projects section:nth-child(4) article .thumbs a:nth-child(4) li:hover #ccTitle {
+    #projects section:nth-child(3) article .thumbs a:nth-child(4) li:hover #ccTitle {
       opacity: 1; }
   #projects #uiInfo {
     text-align: center; }
@@ -897,22 +944,27 @@ header {
           font-size: 1.5rem;
           line-height: 30px;
           text-align: center; }
-  #projects section:nth-child(3) article.row:nth-child(odd) a:nth-child(2n + 0) section.titles {
+          @media (max-width: 1450px) {
+            #projects .thumbs li .titles > p {
+              font-size: 1.3rem;
+              height: 400px;
+              overflow-y: scroll; } }
+  #projects section:nth-child(2) article.row:nth-child(odd) a:nth-child(2n + 0) section.titles {
     background-color: rgba(236, 170, 30, 0.9); }
-  #projects section:nth-child(3) article.row:nth-child(even) a:nth-child(2n + 1) section.titles {
+  #projects section:nth-child(2) article.row:nth-child(even) a:nth-child(2n + 1) section.titles {
     background-color: rgba(236, 170, 30, 0.9); }
-  #projects section:nth-child(4) article.row:nth-child(odd) a:nth-child(2n + 1) section.titles {
+  #projects section:nth-child(3) article.row:nth-child(odd) a:nth-child(2n + 1) section.titles {
     background-color: rgba(236, 170, 30, 0.9); }
-  #projects section:nth-child(4) article.row:nth-child(even) a:nth-child(2n + 0) section.titles {
+  #projects section:nth-child(3) article.row:nth-child(even) a:nth-child(2n + 0) section.titles {
     background-color: rgba(236, 170, 30, 0.9); }
-  #projects section:nth-child(3) article .thumbs a:nth-child(even) section.titles > h3, #projects section:nth-child(3) article .thumbs a:nth-child(even) section.titles > p {
+  #projects section:nth-child(2) article .thumbs a:nth-child(even) section.titles > h3, #projects section:nth-child(2) article .thumbs a:nth-child(even) section.titles > p {
     color: #000; }
-  #projects section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > h3, #projects section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > p {
+  #projects section:nth-child(3) article .thumbs a:nth-child(odd) section.titles > h3, #projects section:nth-child(3) article .thumbs a:nth-child(odd) section.titles > p {
     color: #000; }
-  #projects section:nth-child(3) article .thumbs a:nth-child(even) section.titles > hr, #projects section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > hr {
+  #projects section:nth-child(2) article .thumbs a:nth-child(even) section.titles > hr, #projects section:nth-child(3) article .thumbs a:nth-child(odd) section.titles > hr {
     background: #000;
     border-color: #000; }
-  #projects section:nth-child(4) article .thumbs a:nth-child(even) section.titles > hr {
+  #projects section:nth-child(3) article .thumbs a:nth-child(even) section.titles > hr {
     background: #FFF;
     border-color: #FFF; }
   #projects .uiTxt {
@@ -932,6 +984,9 @@ header {
       margin-top: 310px;
       margin-bottom: 5px;
       text-transform: uppercase; }
+      @media (max-width: 1450px) {
+        #projects .uiTxt h3 {
+          font-size: 1.5rem; } }
     #projects .uiTxt hr {
       background-color: #FFF;
       border-color: #FFF;
@@ -948,6 +1003,9 @@ header {
       font-size: 1.7rem;
       line-height: 30px;
       text-align: center; }
+      @media (max-width: 1450px) {
+        #projects .uiTxt p {
+          font-size: 1.3rem; } }
   #projects .uiTxt2 {
     display: none; }
   #projects .uicopy a {
@@ -955,14 +1013,14 @@ header {
     font-size: 1em; }
 
 footer {
-  padding: 30px 2%;
+  padding: 30px 3%;
   background: #2B2B2B; }
   footer article {
     display: flex;
     flex-direction: row;
     margin: auto;
     align-items: center; }
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
       footer article {
         display: flex;
         flex-direction: column;
@@ -973,18 +1031,31 @@ footer {
       @media (max-width: 500px) {
         footer article p {
           float: none;
-          margin-bottom: 15px;
+          line-height: 25px;
           text-align: center; } }
+      @media (max-width: 800px) {
+        footer article p {
+          margin-bottom: 15px; } }
+      @media (max-width: 991px) {
+        footer article p {
+          font-size: .9em; } }
     footer article section {
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
+      @media (max-width: 800px) {
+        footer article section {
+          justify-content: center;
+          width: 100%; } }
       footer article section figure {
         margin-right: 10%; }
       footer article section figure:last-child {
         margin-right: 0; }
       footer article section figure img {
         cursor: pointer; }
+        @media (max-width: 991px) {
+          footer article section figure img {
+            width: 25px; } }
   footer ul {
     display: flex;
     flex-direction: row;

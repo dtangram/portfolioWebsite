@@ -60,10 +60,22 @@ p{
 
 .graphic{
   background: $colorOrange;
-  @extend %center-element;
   height: 10px;
-  margin-bottom: 50px;
+  @extend %center-element;
+  // margin: 0 auto 20px;
+  // margin-bottom: 50px;
   width: 70px;
+
+  @include mq(mediumLargeMd2){
+    height: 8px;
+    width: 67px;
+  }
+
+  @include mq(small){
+    height: 6px;
+    margin-top: 10px;
+    width: 60px;
+  }
 }
 
 .row{
@@ -493,18 +505,22 @@ header{
   	display: inline-block;
 
     @include mq(small){
-      width: 50% !important;
+      width: 77% !important;
     }
 
-    @include mq(medium){
-      width: 40%;
-    }
+    // @include mq(medium){
+    //   width: 40%;
+    // }
 
     a{
       align-items: center;
       display: flex;
       flex-direction: row;
       padding: .5rem 1rem;
+
+      @include mq(small){
+        flex-direction: column;
+      }
 
       &:hover{
         text-decoration: none;
@@ -515,6 +531,18 @@ header{
         height: 100%;
         margin-right: 5%;
         width: 38%;
+
+        @include mq(small){
+          margin-bottom: 6%;
+        }
+
+        @include mq(mediumLargeMd2){
+          width: 30%;
+        }
+
+        @include mq(mediumLarge){
+          width: 34%;
+        }
       }
 
       figure img{
@@ -522,12 +550,12 @@ header{
 
         @include mq(small){
           margin-right: 2%;
-          width: 45px;
+          width: 80px;
         }
 
-        @include mq(medium){
-          width: 15px;
-        }
+        // @include mq(medium){
+        //   width: 15px;
+        // }
       }
 
       h1{
@@ -535,12 +563,25 @@ header{
         font-size: 3rem;
         font-weight: $fontWeightBold;
 
-        @include mq(mediumLargeMd2){
-          font-size: 1.3em;
+        @include mq(medium){
+          font-size: 2rem;
+          line-height: 0;
         }
+
+        // @include mq(mediumLargeMd2){
+        //   font-size: 2.2rem;
+        // }
 
         @include mq(mediumLargeMd){
           padding-top: 3px;
+        }
+
+        @include mq(mediumLarge){
+          font-size: 2.5rem;
+        }
+
+        @include mq(small){
+          font-size: 1.5rem;
         }
       }
     }
@@ -566,9 +607,15 @@ header{
     @include mq(medium){
       position: absolute;
       margin-right: 0;
-      top: 19px;
       z-index: 99;
       width: auto;
+    }
+
+    &.navbar-dark .navbar-toggler {
+      background-color: $colorOrange;
+      border-color: rgba(236,170,30, 1);
+      color: rgba(236,170,30, 1);
+      font-size: 1.5rem;
     }
 
     article.container{
@@ -577,7 +624,8 @@ header{
 
         @include mq(medium){
           background: $colorCharcoal;
-          margin-top: 38px;
+          // margin-top: 38px;
+          padding: 12px 12% 5%;
           // visibility: hidden;
         };
 
@@ -587,6 +635,7 @@ header{
         }
 
         li{
+          margin-bottom: 15px;
           padding: 0;
         	text-align: center;
           width: 100px;
@@ -605,6 +654,10 @@ header{
           text-align: center;
           text-transform: uppercase;
           text-decoration: none;
+
+          @include mq(mediumLarge){
+            font-size: 1.6rem;
+          }
         }
 
         .currentLink a:after{
@@ -658,25 +711,36 @@ header{
 
 /*HOME*/
 #home{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
   height: 1150px;
+  padding-top: 220px;
   position: relative;
   width: 100%;
 
   .personal{
-    display: flex;
+    // display: flex;
     flex: none;
-    flex-direction: column;
-    justify-content: center;
-    margin: 50px auto 0;
+    // flex: 0 0 65%;
+    // flex-direction: column;
+    // justify-content: center;
+    height: auto;
+    margin: 0 auto 50px;
     width: 60%;
     z-index: 1;
+
+    @include mq(mediumLarge){
+      width: 100%;
+    }
 
     .profile{
       margin: 0 auto;
       width: 200px;
+
+      @include mq(mediumLarge){
+        width: 150px;
+      }
 
       img{
         width: 100%;
@@ -688,11 +752,20 @@ header{
       font-weight: $fontWeightBold;
       text-align: center;
 
-      .graphic {
-        background: $colorOrange;
-        margin: 0 auto 20px;
-        height: 10px;
-        width: 70px;
+      @include mq(mediumLargeMd2){
+        font-size: 3rem;
+        line-height: 50px;
+      }
+
+      @include mq(mediumLarge){
+        font-size: 3.5rem;
+        line-height: 60px;
+        margin-bottom: 40px;
+      }
+
+      @include mq(small){
+        font-size: 2rem;
+        line-height: 30px;
       }
     }
 
@@ -700,6 +773,21 @@ header{
       font-size: 2.5rem;
       line-height: 50px;
       padding: 0 3%;
+
+      @include mq(mediumLargeMd2){
+        font-size: 1.8rem;
+        line-height: 30px;
+      }
+
+      @include mq(mediumLarge){
+        font-size: 2.1rem;
+        line-height: 40px;
+      }
+
+      @include mq(small){
+        font-size: 1.3rem;
+        line-height: 20px;
+      }
 
       span{
         color: $colorOrange;
@@ -775,7 +863,10 @@ header{
     text-align: center;
 
     .down{
+      @extend %center-element;
+      left: 0;
       position: absolute !important;
+      right: 0;
       z-index: 4;
       -webkit-animation: downArrow 4000ms ease-in-out infinite;
       -moz-animation: downArrow 4000ms ease-in-out infinite;
@@ -816,15 +907,7 @@ header{
     font-size: 4rem;
     font-weight: $fontWeightBold;
     margin-top: 72px;
-    margin-bottom: 0;
     text-align: center;
-
-    .graphic{
-      background: $colorOrange;
-      margin: 0 auto 20px;
-      height: 10px;
-      width: 70px;
-    }
   }
 
   section.container, article.row{
@@ -833,7 +916,7 @@ header{
     padding: 0;
   }
 
-  section:nth-child(3) > article{
+  section:nth-child(2) > article{
     display: block;
 
     .thumbs{
@@ -1001,7 +1084,7 @@ header{
     }
   }
 
-  section:nth-child(4) article{
+  section:nth-child(3) article{
     display: block;
 
     .thumbs{
@@ -1237,41 +1320,53 @@ header{
           // font-weight: $fontWeightBold;
           line-height: 30px;
       		text-align: center;
+
+          @include mq(medium1){
+            font-size: 1.6rem;
+            height: auto;
+            overflow-y: visible;
+          }
+
+          @include mq(large1){
+            font-size: 1.3rem;
+            height: 400px;
+            overflow-y: scroll;
+          }
       	}
   		}
   	}
   }
 
-  section:nth-child(3) article.row:nth-child(odd) a:nth-child(2n + 0) section.titles{
+  section:nth-child(2) article.row:nth-child(odd) a:nth-child(2n + 0) section.titles{
   	background-color: rgba(236, 170, 30, .9);
   }
 
-  section:nth-child(3) article.row:nth-child(even) a:nth-child(2n + 1) section.titles{
+  section:nth-child(2) article.row:nth-child(even) a:nth-child(2n + 1) section.titles{
   	background-color: rgba(236, 170, 30, .9);
   }
 
-  section:nth-child(4) article.row:nth-child(odd) a:nth-child(2n + 1) section.titles{
+  section:nth-child(3) article.row:nth-child(odd) a:nth-child(2n + 1) section.titles{
   	background-color: rgba(236, 170, 30, .9);
   }
 
-  section:nth-child(4) article.row:nth-child(even) a:nth-child(2n + 0) section.titles{
+  section:nth-child(3) article.row:nth-child(even) a:nth-child(2n + 0) section.titles{
   	background-color: rgba(236, 170, 30, .9);
   }
 
-  section:nth-child(3) article .thumbs a:nth-child(even) section.titles > h3, section:nth-child(3) article .thumbs a:nth-child(even) section.titles > p{
+  section:nth-child(2) article .thumbs a:nth-child(even) section.titles > h3, section:nth-child(2) article .thumbs a:nth-child(even) section.titles > p{
     color: $colorBlack;
   }
 
-  section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > h3, section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > p{
+  section:nth-child(3) article .thumbs a:nth-child(odd) section.titles > h3, section:nth-child(3) article .thumbs a:nth-child(odd) section.titles > p{
     color: $colorBlack;
   }
 
-  section:nth-child(3) article .thumbs a:nth-child(even) section.titles > hr, section:nth-child(4) article .thumbs a:nth-child(odd) section.titles > hr{
+  section:nth-child(2) article .thumbs a:nth-child(even) section.titles > hr, section:nth-child(3) article .thumbs a:nth-child(odd) section.titles > hr{
     background: $colorBlack;
     border-color: $colorBlack;
   }
 
-  section:nth-child(4) article .thumbs a:nth-child(even) section.titles > hr{
+  section:nth-child(3) article .thumbs a:nth-child(even) section.titles > hr{
     background: $colorWhite;
     border-color: $colorWhite;
   }
@@ -1304,6 +1399,10 @@ header{
   		margin-top: 310px;
   		margin-bottom: 5px;
       text-transform: uppercase;
+
+      @include mq(large1){
+        font-size: 1.5rem;
+      }
   	}
 
   	hr{
@@ -1324,6 +1423,10 @@ header{
   		font-size: 1.7rem;
       line-height: 30px;
   		text-align: center;
+
+      @include mq(large1){
+        font-size: 1.3rem;
+      }
   	}
   }
 
@@ -1341,7 +1444,7 @@ header{
 
 // FOOTER
 footer{
-	padding: 30px 2%;
+	padding: 30px 3%;
 	background: $colorCharcoal;
 
   article{
@@ -1350,7 +1453,7 @@ footer{
     margin: auto;
     align-items: center;
 
-    @include mq(small){
+    @include mq(medium){
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -1362,8 +1465,16 @@ footer{
 
       @include mq(small){
         float: none;
-        margin-bottom: 15px;
+        line-height: 25px;
         text-align: center;
+      }
+
+      @include mq(medium){
+        margin-bottom: 15px;
+      }
+
+      @include mq(mediumLargeMd){
+        font-size: .9em;
       }
     }
 
@@ -1371,6 +1482,11 @@ footer{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      @include mq(medium){
+        justify-content: center;
+        width: 100%;
+      }
 
       figure{
         margin-right: 10%;
@@ -1382,6 +1498,10 @@ footer{
 
       figure img{
         cursor: pointer;
+
+        @include mq(mediumLargeMd){
+          width: 25px;
+        }
       }
     }
   }
