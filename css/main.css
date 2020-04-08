@@ -398,29 +398,31 @@ header {
         height: 100%;
         margin-right: 5%;
         width: 38%; }
-        @media (max-width: 500px) {
-          header .logo a figure {
-            margin-bottom: 6%; } }
         @media (max-width: 897px) {
           header .logo a figure {
             width: 30%; } }
         @media (max-width: 1199px) {
           header .logo a figure {
             width: 34%; } }
+        @media (max-width: 500px) {
+          header .logo a figure {
+            margin-bottom: 6%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 45%; } }
+        @media (max-width: 400px) {
+          header .logo a figure {
+            width: 50%; } }
       header .logo a figure img {
         width: 100%; }
-        @media (max-width: 500px) {
-          header .logo a figure img {
-            margin-right: 2%;
-            width: 80px; } }
       header .logo a h1 {
         color: #FFF;
         font-size: 3rem;
         font-weight: bold; }
         @media (max-width: 800px) {
           header .logo a h1 {
-            font-size: 2rem;
-            line-height: 0; } }
+            font-size: 2rem; } }
         @media (max-width: 991px) {
           header .logo a h1 {
             padding-top: 3px; } }
@@ -429,7 +431,12 @@ header {
             font-size: 2.5rem; } }
         @media (max-width: 500px) {
           header .logo a h1 {
-            font-size: 1.5rem; } }
+            font-size: 1.8rem;
+            line-height: 0; } }
+        @media (max-width: 400px) {
+          header .logo a h1 {
+            font-size: 1.6rem;
+            line-height: 20px; } }
   header nav {
     float: right;
     margin-right: 0; }
@@ -553,7 +560,7 @@ header {
           margin-bottom: 40px; } }
       @media (max-width: 500px) {
         #home .personal h2 {
-          font-size: 2rem;
+          font-size: 2.3rem;
           line-height: 30px; } }
     #home .personal p {
       font-size: 2.5rem;
@@ -569,8 +576,8 @@ header {
           line-height: 40px; } }
       @media (max-width: 500px) {
         #home .personal p {
-          font-size: 1.3rem;
-          line-height: 20px; } }
+          font-size: 1.8rem;
+          line-height: 25px; } }
       #home .personal p span {
         color: #ECAA1E; }
 
@@ -1003,9 +1010,9 @@ header {
       font-size: 1.7rem;
       line-height: 30px;
       text-align: center; }
-      @media (max-width: 1450px) {
+      @media (max-width: 500px) {
         #projects .uiTxt p {
-          font-size: 1.3rem; } }
+          font-size: 1.4rem; } }
   #projects .uiTxt2 {
     display: none; }
   #projects .uicopy a {
@@ -1013,8 +1020,18 @@ header {
     font-size: 1em; }
 
 footer {
-  padding: 30px 3%;
-  background: #2B2B2B; }
+  background: #2B2B2B;
+  padding: 30px 3%; }
+  @media (max-width: 500px) {
+    footer {
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      padding: 10px 3%;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      z-index: 3; } }
   footer article {
     display: flex;
     flex-direction: row;

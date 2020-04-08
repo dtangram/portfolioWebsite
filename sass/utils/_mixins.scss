@@ -1,4 +1,10 @@
 @mixin mq($size){
+  @if $size == small2{
+    @media(max-width: 400px){
+      @content;
+    }
+  }
+
   @if $size == small{
     @media(max-width: 500px){
       @content;

@@ -532,10 +532,6 @@ header{
         margin-right: 5%;
         width: 38%;
 
-        @include mq(small){
-          margin-bottom: 6%;
-        }
-
         @include mq(mediumLargeMd2){
           width: 30%;
         }
@@ -543,15 +539,27 @@ header{
         @include mq(mediumLarge){
           width: 34%;
         }
+
+        @include mq(small){
+          margin-bottom: 6%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          width: 45%;
+        }
+
+        @include mq(small2){
+          width: 50%;
+        }
       }
 
       figure img{
         width: 100%;
 
-        @include mq(small){
-          margin-right: 2%;
-          width: 80px;
-        }
+        // @include mq(small){
+        //   margin-right: 2%;
+        //   width: 80px;
+        // }
 
         // @include mq(medium){
         //   width: 15px;
@@ -565,7 +573,6 @@ header{
 
         @include mq(medium){
           font-size: 2rem;
-          line-height: 0;
         }
 
         // @include mq(mediumLargeMd2){
@@ -581,7 +588,13 @@ header{
         }
 
         @include mq(small){
-          font-size: 1.5rem;
+          font-size: 1.8rem;
+          line-height: 0;
+        }
+
+        @include mq(small2){
+          font-size: 1.6rem;
+          line-height: 20px;
         }
       }
     }
@@ -764,7 +777,7 @@ header{
       }
 
       @include mq(small){
-        font-size: 2rem;
+        font-size: 2.3rem;
         line-height: 30px;
       }
     }
@@ -785,8 +798,8 @@ header{
       }
 
       @include mq(small){
-        font-size: 1.3rem;
-        line-height: 20px;
+        font-size: 1.8rem;
+        line-height: 25px;
       }
 
       span{
@@ -1424,9 +1437,13 @@ header{
       line-height: 30px;
   		text-align: center;
 
-      @include mq(large1){
-        font-size: 1.3rem;
+      @include mq(small){
+        font-size: 1.4rem;
       }
+
+      // @include mq(large1){
+      //   font-size: 1.3rem;
+      // }
   	}
   }
 
@@ -1444,8 +1461,19 @@ header{
 
 // FOOTER
 footer{
+  background: $colorCharcoal;
 	padding: 30px 3%;
-	background: $colorCharcoal;
+
+  @include mq(small){
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px 3%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+  }
 
   article{
     display: flex;
