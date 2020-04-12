@@ -52,4 +52,10 @@
       @content;
     }
   }
+
+  @else if $size == largeLG{
+    @media(max-width: 1700px){
+      @content;
+    }
+  }
 }
