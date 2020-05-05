@@ -24,23 +24,21 @@ body{
 h1, h2{
   font-weight: $fontWeightBold;
 	line-height: 70px;
-	text-transform: capitalize;
 }
 
 h1{
   color: $colorWhite;
+  font-size: 2.5rem;
   font-weight: bold;
+	text-transform: uppercase;
 }
 
 h2{
-	font-size: 2em;
+	font-size: 4rem;
   margin-bottom: 30px;
   margin-top: 10px;
   text-align: center;
-}
-
-.currentLink a{
-  text-decoration: underline;
+	text-transform: capitalize;
 }
 
 a{
@@ -51,6 +49,41 @@ a{
     color: $colorWhite;
     text-decoration: underline;
   }
+}
+
+.currentLink a{
+  text-decoration: underline;
+}
+
+.currentLink a:after{
+  content: '';
+  display: block;
+  margin: 10px auto 0;
+  height: 2px;
+  width: 80%;
+  background: $colorOrange;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.slideUnder a{
+  display: inline-block;
+  position: relative;
+  height: 2px !important;
+}
+
+.slideUnder:after{
+  content: '';
+  display: block;
+  margin: 10px auto 0;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.slideUnder:hover:after{
+  width: 80%;
+  background: $colorOrange;
 }
 
 p{
@@ -1325,6 +1358,11 @@ header{
 	width: 100%;
   z-index: 999;
 
+  @include mq(mediumLargeMd2){
+    height: auto;
+    padding: 3%;
+  }
+
   @include mq(small){
     width: 100%;
   }
@@ -1403,7 +1441,6 @@ header{
 
       h1{
         color: $colorWhite;
-        font-size: 3rem;
         font-weight: $fontWeightBold;
 
         @include mq(medium){
@@ -1424,12 +1461,12 @@ header{
 
         @include mq(small){
           font-size: 1.8rem;
-          line-height: 0;
+          line-height: 20px;
         }
 
         @include mq(small2){
-          font-size: 1.6rem;
-          line-height: 20px;
+          font-size: 1.5rem;
+          // line-height: 20px;
         }
       }
     }
@@ -1470,12 +1507,12 @@ header{
       section#navbarResponsive ul{
         // visibility: visible;
 
-        @include mq(medium){
+        @include mq(mediumLargeMd2){
           background: $colorCharcoal;
           // margin-top: 38px;
           padding: 12px 12% 5%;
           // visibility: hidden;
-        };
+        }
 
         @include mq(medium){
           display: flex;
@@ -1484,9 +1521,9 @@ header{
 
         li{
           margin-bottom: 15px;
-          padding: 0;
+          padding: 0 3%;
         	text-align: center;
-          width: 100px;
+          // width: 100px;
 
           @include mq(medium){
             font-size: .9em;
@@ -1503,41 +1540,14 @@ header{
           text-transform: uppercase;
           text-decoration: none;
 
-          @include mq(mediumLarge){
-            font-size: 1.6rem;
+          // @include mq(mediumLarge){
+          //   font-size: 1.6rem;
+          // }
+
+          @include mq(mediumLargeMd2){
+            font-size: 1.4rem;
           }
         }
-
-        .currentLink a:after{
-      		content: '';
-      		display: block;
-      		margin: 10px auto 0;
-      		height: 2px;
-      		width: 80%;
-      		background: $colorOrange;
-      		transition: width .5s ease, background-color .5s ease;
-      	}
-
-        .slideUnder a{
-      		display: inline-block;
-      		position: relative;
-      		height: 2px !important;
-      	}
-
-        .slideUnder:after{
-      		content: '';
-      		display: block;
-      		margin: 10px auto 0;
-      		height: 2px;
-      		width: 0px;
-      		background: transparent;
-      		transition: width .5s ease, background-color .5s ease;
-      	}
-
-      	.slideUnder:hover:after{
-      		width: 80%;
-      		background: $colorOrange;
-      	}
       }
     }
   }
@@ -1752,7 +1762,6 @@ header{
 
   h2{
     color: $colorBlue;
-    font-size: 4rem;
     font-weight: $fontWeightBold;
     margin-top: 72px;
     text-align: center;
@@ -2289,6 +2298,95 @@ header{
   .uicopy a{
   	color: $colorWhite;
   	font-size: 1em;
+  }
+}
+
+
+// WIREFRAMES
+#wireframes{
+  background-color: $colorGray;
+
+  h2{
+    color: $colorCharcoal;
+
+    .graphic{
+      margin-bottom: 75px;
+    }
+  }
+
+  > section{
+    padding: 40px 3%;
+    width: 100%;
+  }
+
+  .wireWrap{
+    > section{
+      padding: 0 5%;
+
+      article h3{
+    		font-size: 1.9rem;
+        font-weight: $fontWeightBold;
+    		// margin-top: 310px;
+    		margin-bottom: 25px;
+        text-transform: uppercase;
+
+        @include mq(medium2){
+          font-size: 2rem;
+        }
+    	}
+
+      article p{
+        line-height: 30px;
+        margin-bottom: 20px;
+
+        @include mq(medium2){
+          font-size: 1.8rem;
+        }
+
+        // a:hover{
+        //   text-decoration: underline;
+        // }
+
+        .slideUnder:hover:after{
+          width: 20%;
+          background: $colorOrange;
+        }
+      }
+
+      section figure{
+        @include mq(medium2){
+          margin-bottom: 20px;
+        }
+
+        width: 100%;
+      }
+
+      section figure img{
+        width: 100%;
+      }
+    }
+  }
+
+  .ghunt, .photobomb{
+    .wireWrap .row{
+      article h3, article p, article p a{
+        color: $colorCharcoal;
+      }
+
+      article p a{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .ulog{
+    background-color: $colorBlue;
+
+    .wireWrap .row{
+      article p a{
+        text-decoration: underline;
+      }
+    }
   }
 }
 

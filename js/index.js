@@ -90,6 +90,10 @@ $(document).ready(function() {
     }
   });
 
+	$("li.nav-link > a").click(function(){
+		$("#navbarResponsive.navbar-collapse").collapse("hide");
+	});
+
 	// DOWN ARROW
 	$("#dwnArr").mouseover(function(){
 		$("#dwnArr").css({"position": "absolute", "z-index": "4", "left": "0", "right": "0"}).stop().animate({"opacity": "1", "margin-top": "50px"}, 500,
