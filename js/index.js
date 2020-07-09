@@ -11,14 +11,14 @@ $(document).ready(function() {
 				linkHome = $("#linkHome"),
 				linkprojects = $("#linkprojects"),
 				linkContact = $("#linkContact"),
-				thumbsNthchild = $("#projects section:nth-child(2) article .thumbs a:nth-child(1) li"),
-				thumbsNthchild2 = $("#projects section:nth-child(2) article .thumbs a:nth-child(2) li"),
-				thumbsNthchild3 = $("#projects section:nth-child(2) article .thumbs a:nth-child(3) li"),
-				thumbsNthchild4 = $("#projects section:nth-child(2) article .thumbs a:nth-child(4) li"),
-				thumbsNthchild5 = $("#projects section:nth-child(3) article .thumbs a:nth-child(1) li"),
-				thumbsNthchild6 = $("#projects section:nth-child(3) article .thumbs a:nth-child(2) li"),
-				thumbsNthchild7 = $("#projects section:nth-child(3) article .thumbs a:nth-child(3) li"),
-				thumbsNthchild8 = $("#projects section:nth-child(3) article .thumbs a:nth-child(4) li"),
+				thumbsNthchild = $("#projects section:nth-child(2) article .thumbs:nth-child(1) article:nth-child(1) > section.overlayDescript"),
+				thumbsNthchild2 = $("#projects section:nth-child(2) article .thumbs:nth-child(1) article:nth-child(2) > section.overlayDescript"),
+				thumbsNthchild3 = $("#projects section:nth-child(2) article .thumbs:nth-child(2) article:nth-child(1) > section.overlayDescript"),
+				thumbsNthchild4 = $("#projects section:nth-child(2) article .thumbs:nth-child(2) article:nth-child(2) > section.overlayDescript"),
+				thumbsNthchild5 = $("#projects section:nth-child(3) article .thumbs:nth-child(1) article:nth-child(1) > section.overlayDescript"),
+				thumbsNthchild6 = $("#projects section:nth-child(3) article .thumbs:nth-child(1) article:nth-child(2) > section.overlayDescript"),
+				thumbsNthchild7 = $("#projects section:nth-child(3) article .thumbs:nth-child(2) article:nth-child(1) > section.overlayDescript"),
+				thumbsNthchild8 = $("#projects section:nth-child(3) article .thumbs:nth-child(2) article:nth-child(2) > section.overlayDescript"),
 				overlay1 = $("#overlay1"),
 				overlay2 = $("#overlay2"),
 				overlay3 = $("#overlay3"),
@@ -112,8 +112,8 @@ $(document).ready(function() {
 	// PROJECTS
 	thumbsNthchild.mouseover(function()
 	{
-		thumb1.stop().animate({"opacity": "0", "left": "480px"}, 500);
-		overlay1.stop().animate({"left": "480px"}, 500, function(){
+		thumb1.stop().animate({"opacity": "0", "left": "780px"}, 300);
+		overlay1.stop().animate({"left": "780px"}, 500, function(){
 			overlay1.css("display", "none");
 		});
 	});
@@ -135,8 +135,8 @@ $(document).ready(function() {
 
 	thumbsNthchild2.mouseover(function()
 	{
-		thumb2.stop().animate({"opacity": "0", "left": "-480px"}, 500);
-		overlay2.stop().animate({"left": "-480px"}, 500, function(){
+		thumb2.stop().animate({"opacity": "0", "left": "-780px"}, 300);
+		overlay2.stop().animate({"left": "-780px"}, 500, function(){
 			overlay2.css("display", "none");
 		});
 	});
@@ -158,8 +158,8 @@ $(document).ready(function() {
 
 	thumbsNthchild3.mouseover(function()
 	{
-		thumb3.stop().animate({"opacity": "0", "left": "480px"}, 500);
-		overlay3.stop().animate({"left": "480px"}, 500, function(){
+		thumb3.stop().animate({"opacity": "0", "left": "-780px"}, 500);
+		overlay3.stop().animate({"left": "-780px"}, 500, function(){
 			overlay3.css("display", "none");
 		});
 	});
@@ -175,8 +175,8 @@ $(document).ready(function() {
 
 	thumbsNthchild4.mouseover(function()
 	{
-		thumb4.stop().animate({"opacity": "0", "left": "-480px"}, 500);
-		overlay4.stop().animate({"left": "-480px"}, 500, function(){
+		thumb4.stop().animate({"opacity": "0", "left": "780px"}, 500);
+		overlay4.stop().animate({"left": "780px"}, 500, function(){
 			overlay4.css("display", "none");
 		});
 	});
@@ -226,16 +226,16 @@ $(document).ready(function() {
 
 	thumbsNthchild7.mouseover(function()
 	{
-		thumb7.stop().animate({"opacity": "0", "left": "-480px"}, 500);
-		overlay7.stop().animate({"left": "-480px"}, 500, function(){
+		thumb7.stop().animate({"opacity": "0", "top": "-500px"}, 500);
+		overlay7.stop().animate({"top": "-500px"}, 500, function(){
 			overlay7.css("display", "none");
 		});
 	});
 
 	thumbsNthchild7.mouseout(function()
 	{
-		overlay7.css("display", "block").stop().animate({"left": "0"}, 500);
-		thumb7.stop().animate({"left": "0"}, 500, function() {
+		overlay7.css("display", "block").stop().animate({"top": "0"}, 500);
+		thumb7.stop().animate({"top": "0"}, 500, function() {
 			thumb7.stop().animate({"opacity": "1"}, 500);
 		});
 	});
@@ -243,16 +243,16 @@ $(document).ready(function() {
 
 	thumbsNthchild8.mouseover(function()
 	{
-		thumb8.stop().animate({"opacity": "0", "left": "480px"}, 500);
-		overlay8.stop().animate({"left": "480px"}, 500, function(){
+		thumb8.stop().animate({"opacity": "0", "top": "500px"}, 500);
+		overlay8.stop().animate({"top": "500px"}, 500, function(){
 			overlay8.css("display", "none");
 		});
 	});
 
 	thumbsNthchild8.mouseout(function()
 	{
-		overlay8.css("display", "block").stop().animate({"left": "0"}, 500);
-		thumb8.stop().animate({"left": "0"}, 500, function() {
+		overlay8.css("display", "block").stop().animate({"top": "0"}, 500);
+		thumb8.stop().animate({"top": "0"}, 500, function() {
 			thumb8.stop().animate({"opacity": "1"}, 500);
 		});
 	});
